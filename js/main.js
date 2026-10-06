@@ -30,8 +30,7 @@ function sanitizeHTML(str) {
 }
 
 function buildPortfolio(data, container) {
-    // Déstructuration mise à jour pour extraire 'formations'
-    const { personnel, experiences, formations, competences } = data;
+    const { personnel, experiences, formations, projets_personnels, competences } = data;
     const nameParts = personnel.identite.split(' ');
     const firstName = nameParts[0];
     const lastName = nameParts.slice(1).join(' ');
@@ -157,6 +156,46 @@ function buildPortfolio(data, container) {
             </section>
         `;
     }
+
+    if (projets_personnels && projets_personnels.length > 0) {
+        html += `
+            <section id="projets" class="content-section">
+                <div class="section-header">
+                    <span class="section-subtitle">— Lab</span>
+                    <h2 class="section-title">Projets Techniques</h2>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem;">Infrastructures et expérimentations personnelles.</p>
+                </div>
+                <div class="projects-grid">
+        `;
+
+        projets_personnels.forEach(proj => {
+            html += `
+                <article class="modern-project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">${sanitizeHTML(proj.title)}</h3>
+                        <span class="project-status">${sanitizeHTML(proj.status)}</span>
+                    </div>
+                    <p class="project-context">// ${sanitizeHTML(proj.context)} • Cible : ${sanitizeHTML(proj.hardware_target)}</p>
+                    <p class="project-desc">${sanitizeHTML(proj.short_description)}</p>
+                    
+                    <div class="project-features">
+                        <ul class="task-list">
+                            ${proj.key_features.map(feature => `<li>${sanitizeHTML(feature)}</li>`).join('')}
+                        </ul>
+                    </div>
+
+                    <div class="tag-container" style="margin-top: 2rem;">
+                        ${proj.technologies.map(tech => `<span class="tag-cyber">${sanitizeHTML(tech)}</span>`).join('')}
+                    </div>
+                </article>
+            `;
+        });
+
+        html += `
+                </div>
+            </section>
+        `;
+    }   
 
     // Génération de la section Compétences
     if (competences) {

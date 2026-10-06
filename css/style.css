@@ -805,3 +805,70 @@ html {
     line-height: 1.6;
     max-width: 800px;
 }
+
+/* Fichier : css/style.css (À ajouter à la fin du fichier) */
+
+/* --- Section Projets (Refonte visuelle) --- */
+.modern-project-card {
+    background-color: #0d1117;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.modern-project-card:hover {
+    border-color: var(--primary-blue);
+    transform: translateY(-2px);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.project-title {
+    color: var(--text-main);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.project-status {
+    background-color: rgba(0, 229, 255, 0.1);
+    color: var(--accent-cyan);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-family: monospace;
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    white-space: nowrap;
+}
+
+.project-context {
+    color: var(--primary-blue);
+    font-family: monospace;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-desc {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.project-features {
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 2px solid var(--primary-blue);
+}
+
+.project-features .task-list {
+    margin-top: 0; /* Écrase la marge supérieure par défaut de la classe existante */
+}

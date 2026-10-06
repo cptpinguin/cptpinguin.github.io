@@ -1,0 +1,142 @@
+{
+  "personnel": {
+    "identite": "Louis Holler",
+    "github_username": "cptpinguin",
+    "titre": "Étudiant en Informatique & Cybersécurité",
+    "etablissement": "IPSSI",
+    "formation": "Bachelor 3 CYBERSÉCURITÉ, IA & DÉV",
+    "statut": "En poste (Alternance Thales)"
+  },
+  "experiences": [
+    {
+      "type": "Alternance",
+      "entreprise": "Thales",
+      "service": "Service d'administration des infrastructures",
+      "role": "Administrateur Système et Sécurité",
+      "periode": "28/09/2026 au 17/09/2027",
+      "missions": [
+        "Maintien en Condition Opérationnelle (MCO) sur des environnements de production critiques (Run).",
+        "Gestion des incidents en direct avec obligation de résultat et maîtrise des impacts sur la continuité de service.",
+        "Patch management (écosystème Windows) et sécurisation des infrastructures.",
+        "Automatisation progressive des tâches d'administration récurrentes."
+      ],
+      "technologies": ["Administration Système", "Scripting", "Environnements de Production", "Windows"],
+      "fichier_lie": null
+    },
+    {
+      "type": "Stage",
+      "entreprise": "Thales Services Numériques",
+      "service": "Service d'administration des infrastructures",
+      "role": "Stagiaire Système et Sécurité",
+      "periode": "Mai 2026 au Septembre 2026",
+      "missions": [
+        "Préparation, déploiement des campagnes de patching et application des remédiations de sécurité sur les infrastructures.",
+        "Conception et développement de scripts pour automatiser les processus de sécurité et optimisation des reportings associés.",
+        "Participation aux comités de sécurité avec le Responsable de la Sécurité (RSP) et maintien de la documentation technique."
+      ],
+      "technologies": ["Ansible", "LVM", "Bash", "Linux"],
+      "fichier_lie": "assets/rapport-thales-sanitized.pdf"
+    },
+    {
+      "type": "Stage",
+      "entreprise": "SPORT 2000 France",
+      "service": "Direction Organisation & Systèmes d'Information (DSI)",
+      "role": "Stagiaire DSI (Développement & Data)",
+      "periode": "19 Mai 2025 au 19 Août 2025",
+      "missions": [
+        "Sécurisation de la matrice magasin via le développement de macros VBA complexes, avec intégration d'un système de droits utilisateurs et historisation dans une base Access.",
+        "Automatisation de l'envoi de reportings par e-mail via la création de Jobs sous l'ETL Talend, impliquant l'écriture de scripts Java.",
+        "Prototypage d'un système de prévision des ventes en Python en exploitant les bibliothèques Pandas et Prophet, basé sur l'extraction de données via requêtes SQL.",
+        "Participation à la phase d'analyse et de conception (UX/UI, cahier des charges) pour la refonte du portail de service transversal (projet RMU)."
+      ],
+      "technologies": ["VBA", "Talend", "Java", "Python", "Pandas", "SQL"],
+      "fichier_lie": "assets/rapport-stage-louis-holler-sport2000.pdf"
+    }
+  ],
+
+"formations": [
+
+    {
+      "periode": "2024 — 2026",
+      "titre": "Cycle Supérieur Informatique",
+      "statut": "Fondamentaux & Sécurité",
+      "description": "Acquisition des bases en administration système (Linux/Windows), développement web et applicatif, et concepts fondamentaux des réseaux."
+    },
+     {
+      "periode": "2026 — 2027",
+      "titre": "Bachelor 3 Cybersécurité, IA & Dév",
+      "statut": "En cours",
+      "description": "Systèmes, réseaux, sécurité des infrastructures et scripting. Préparation technique pour une poursuite en Master."
+    },
+    {
+      "periode": "2027 — 2029",
+      "titre": "Master Cybersécurité, Systèmes et Réseaux",
+      "statut": "Ambition",
+      "description": "Sécurité des systèmes, pentest, cryptographie, gouvernance SSI et DevSecOps."
+    }
+  ],
+
+  "projets_personnels": [
+    {
+      "id": "arch-linux-workstation",
+      "title": "Déploiement et Sécurisation d'une Workstation Arch Linux",
+      "category": "Administration Système & Sécurité",
+      "context": "Projet personnel d'architecture système",
+      "hardware_target": "Asus Vivobook",
+      "short_description": "Installation, configuration et sécurisation complète d'un environnement Arch Linux sur mesure, optimisé pour l'administration système et les environnements de cybersécurité.",
+      "technologies": [
+        "Arch Linux",
+        "Hyprland",
+        "Wayland",
+        "Waybar",
+        "Fish Shell",
+        "Vim",
+        "LUKS",
+        "Dracut",
+        "GRUB"
+      ],
+      "key_features": [
+        "Chiffrement intégral du disque (FDE) via LUKS, avec gestion du déchiffrement en phase de pré-amorçage assurée par une image initramfs générée sous Dracut.",
+        "Déploiement d'un gestionnaire de fenêtres en tuiles (Tiling Window Manager) dynamique avec Hyprland.",
+        "Configuration du chargeur d'amorçage GRUB avec gestion multi-noyaux (Linux-Zen, Linux-LTS)."
+      ],
+      "date_implemented": "2026",
+      "status": "Maintenu en continu"
+    }
+  ],
+  "competences": {
+    "systemes_et_reseaux": [
+      { "nom": "Arch Linux", "niveau": 50 },
+      { "nom": "Windows Server", "niveau": 50 },
+      { "nom": "Bash", "niveau": 30 },
+      { "nom": "Ansible", "niveau": 20 },
+      { "nom": "LVM", "niveau": 40 }
+    ],
+    "cybersecurite": [
+      { "nom": "Hardening OS", "niveau": 40 },
+      { "nom": "IAM", "niveau": 30 },
+      { "nom": "Moindre privilège", "niveau": 30 },
+      { "nom": "Chiffrement LUKS", "niveau": 30 }
+    ],
+    "developpement": [
+      { "nom": "Python", "niveau": 30 },
+      { "nom": "PHP", "niveau": 30 },
+      { "nom": "JavaScript", "niveau": 30 },
+      { "nom": "SQL", "niveau": 75 },
+      { "nom": "VBA", "niveau": 50 }
+    ],
+    "outils": [
+      { "nom": "Vim", "niveau": 70 },
+      { "nom": "Git", "niveau": 60 },
+      { "nom": "VSCode / VSCodium", "niveau": 85 },
+      { "nom": "Talend", "niveau": 65 }
+    ]
+  },
+  "contact": {
+    "email": "holler.louis@gmail.com",
+    "telephone": "+33 07 69 46 89 53",
+    "localisation": "Île-de-France, France"
+  }
+
+  
+}

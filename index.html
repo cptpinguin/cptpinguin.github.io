@@ -3,162 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Louis | Portfolio Cybersécurité & Systèmes</title>
-    <style>
-        :root {
-            /* Palette Dark Mode (Slate) */
-            --bg-color: #0f172a;       /* Ardoise très sombre (Fond principal) */
-            --surface-color: #1e293b;  /* Ardoise sombre (Cartes) */
-            --text-main: #f1f5f9;      /* Blanc cassé (Texte principal) */
-            --text-muted: #94a3b8;     /* Gris bleuté (Texte secondaire) */
-            --primary-blue: #3b82f6;   /* Bleu vif (Liens et actions) */
-            --border-color: #334155;   /* Bordures discrètes */
-            --code-bg: #020617;        /* Noir profond (Badge terminal) */
-            --code-text: #38bdf8;      /* Cyan (Texte terminal) */
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased; /* Améliore la netteté sur fond sombre */
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text-main);
-            margin-left: 1.5rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        nav a:hover { color: var(--primary-blue); }
-
-        .hero {
-            padding: 4rem 0;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .hero .terminal-badge {
-            display: inline-block;
-            background-color: var(--code-bg);
-            color: var(--code-text);
-            font-family: monospace;
-            padding: 0.25rem 0.75rem;
-            border-radius: 4px;
-            font-size: 0.875rem;
-            margin-bottom: 1.5rem;
-            border: 1px solid var(--border-color);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .card {
-            background-color: var(--surface-color);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            transition: transform 0.2s, border-color 0.2s;
-        }
-
-        .card:hover {
-            transform: translateY(-2px);
-            border-color: var(--primary-blue);
-        }
-
-        .card h3 {
-            color: var(--primary-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .tag-container {
-            display: flex;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .tag {
-            background-color: var(--bg-color);
-            color: var(--text-muted);
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            border: 1px solid var(--border-color);
-        }
-    </style>
+    <title>Louis Holler | Portfolio Cyber</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div style="font-weight: 700; font-size: 1.25rem;">Louis.</div>
-            <nav>
-                <a href="#projets">Projets</a>
-                <a href="#infrastructure">Infrastructure</a>
-            </nav>
-        </header>
+    <header class="navbar">
+        <div class="nav-brand">
+            <span class="text-white">Portfolio</span>
+            <span class="text-accent">Cyber</span>
+        </div>
+        
+        <nav class="nav-links">
+            <a href="#accueil" class="active">Accueil</a>
+            <a href="#parcours">Parcours</a>
+            <a href="#experiences">Expériences</a>
+            <a href="#competences">Compétences</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        
+        <div class="nav-status" style="color: var(--primary-blue); border-color: var(--primary-blue); background-color: rgba(59, 130, 246, 0.1);">
+            <span class="status-indicator" style="background-color: var(--primary-blue); box-shadow: 0 0 8px var(--primary-blue);"></span>
+            En poste
+        </div>
+    </header>
 
-        <main>
-            <section class="hero">
-                <div class="terminal-badge">louis@archlinux:~ $ whoami</div>
-                <h1>Ingénierie Système & Cybersécurité</h1>
-                <p style="color: var(--text-muted); max-width: 600px;">
-                    Étudiant à l'IPSSI en 3ème année post-bachelor. Spécialisé dans la sécurisation des infrastructures, l'automatisation système sous Linux et l'analyse de vulnérabilités.
-                </p>
-            </section>
+    <main id="app" class="container">
+        <!-- Le moteur de rendu JavaScript (main.js) injectera le DOM ici -->
+    </main>
 
-            <section id="projets">
-                <h2>Write-ups & Audits</h2>
-                <div class="grid">
-                    <div class="card">
-                        <h3>Rapport de Stage - Thales</h3>
-                        <p>Analyse de l'infrastructure réseau, implémentation de protocoles de sécurité et durcissement des systèmes d'information.</p>
-                        <div class="tag-container">
-                            <span class="tag">Audit</span>
-                            <span class="tag">Réseau</span>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h3>Automatisation Arch Linux</h3>
-                        <p>Scripts de déploiement et configuration automatisée (Hyprland, Waybar) avec gestion stricte des permissions via un environnement chrooté.</p>
-                        <div class="tag-container">
-                            <span class="tag">Bash</span>
-                            <span class="tag">Linux</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
